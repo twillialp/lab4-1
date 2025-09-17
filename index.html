@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = Number(prompt("Enter the first number"))
+        let y = Number(prompt("Enter the second number"))
+        let op = prompt("Enter the operator")
+
+        function add(num1,num2){
+            return num1 + num2
+
+        }
+
+        function subtract(num1,num2){
+            return num1 - num2
+
+        }
+
+        function multiply(num1,num2){
+            return num1 * num2
+
+        }
+
+        function divide(num1,num2){
+            return num1 / num2
+
+        }
+
+       if(op == '+'){
+        console.log(add(x,y))
+       }
+       else if(op == '-'){
+        console.log(subtract(x,y))
+       }
+       else if(op == '*'){
+        console.log(multiply(x,y))
+       }
+       else {
+        console.log(divide(x,y))
+       }
+
+
+
+
+    </script>
+
+
+</body>
+</html>

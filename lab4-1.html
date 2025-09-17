@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4.1</title>
+  </head>
+  <body>
+    <script>
+    //task 1
+      function formatFullName(firstName, lastName) {
+        return lastName + ", " + firstName;
+      }
+
+      function formatFullName(firstName, lastName) {
+        return `${
+          lastName.substring(0, 1).toUpperCase() + lastName.substring(1)
+        }, ${firstName.substring(0, 1).toUpperCase() + firstName.substring(1)}`;
+      }
+      let results = formatFullName("addy", "williams");
+      console.log(results);
+    //task 2
+      function calculateTotalCost(price, quantity, taxRate) {
+        return price * quantity * (1 + taxRate);
+      }
+      console.log(`Original total cost: $${calculateTotalCost(100, 2, 0.08).toFixed(2)}`);
+
+    //task 3
+      function checkEligibilty(age, isEmployed) {
+        if (age >= 18 && isEmployed) {
+          console.log("Eligible");
+        } else if (age >= 18) {
+          console.log("Conditionally Eligible");
+        } else {
+          console.log("Not Eligible");
+        }
+      }
+//task 4
+      // Function with optional discount
+      function calculateTotalCostWithDiscount(price, quantity, taxRate, discount = 0) {
+        const subtotal = price * quantity;
+        const discountedSubtotal = subtotal - discount;
+        const total = discountedSubtotal * (1 + taxRate);
+        return total;
+      }
+
+      // Example with no discount
+      console.log(`New total (no discount): $${calculateTotalCostWithDiscount(100, 2, 0.08).toFixed(2)}`);
+      // Example with a $20 discount
+      console.log(`New total ($20 discount): $${calculateTotalCostWithDiscount(100, 2, 0.08, 20).toFixed(2)}`);
+    </script>
+  </body>
+</html>
